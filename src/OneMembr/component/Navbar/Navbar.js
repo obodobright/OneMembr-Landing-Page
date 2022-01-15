@@ -9,15 +9,22 @@ export const NavBar = () => {
       <Wrapper className="container">
         <Logo src={logo} />
         <Navigation>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/for-business">For Business</NavLink>
+          <NavLink>Home</NavLink>
+          <NavLink>
+            <a
+              href="mailto:contact@onemembr.com"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Contact us
+            </a>
+          </NavLink>
         </Navigation>
       </Wrapper>
     </Container>
   );
 };
 
-const NavLink = styled(Link)`
+const NavLink = styled.div`
   margin: 0 30px;
   font-size: 20px;
   cursor: pointer;
@@ -40,6 +47,7 @@ const Navigation = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 `;
 const Wrapper = styled.main`
   //   width: 500px;

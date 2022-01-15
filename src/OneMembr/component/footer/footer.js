@@ -11,25 +11,30 @@ export const Footer = () => {
           <FooterHead>
             <Logo src={logo} />
             <IconHolder>
-              <Icon>
-                <AiOutlineInstagram />
-              </Icon>
-              <Icon>
-                <AiOutlineTwitter />
-              </Icon>
-              <Icon>
-                <AiOutlineMail />
-              </Icon>
+              <a href="https://instagram.com/joinonemembr" target="_blank">
+                <Icon>
+                  <AiOutlineInstagram />
+                </Icon>
+              </a>
+              <a href="https://twitter.com/onemembr" target="_blank">
+                <Icon>
+                  <AiOutlineTwitter />
+                </Icon>
+              </a>
+              <a href="mailto:contact@onemembr.com" target="_blank">
+                <Icon>
+                  <AiOutlineMail />
+                </Icon>
+              </a>
             </IconHolder>
           </FooterHead>
           <FooterBottom>
             <Content>
               <ul>
-                <ListHeader>More OneMembr</ListHeader>
-                <li>New User Guide</li>
-                <li>Guidelines</li>
-                <li>Terms</li>
-                <li>Privacy</li>
+                <ListHeader>Contact us</ListHeader>
+                <a href="mailto:contact@onemembr.com">
+                  <li>contact@onemembr.com</li>
+                </a>
               </ul>
             </Content>
           </FooterBottom>
