@@ -50,21 +50,13 @@ const Navigation = styled.nav`
   flex-direction: row;
 `;
 const Wrapper = styled.main`
-  //   width: 500px;
   height: 80px;
   display: flex;
   align-items: center;
-  //   padding: 0 30px;
 `;
 
 const Container = styled.main`
   width: 100%;
   height: 80px;
-  // background: white;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: white;
 `;
