@@ -1,77 +1,58 @@
 import React from "react";
 import styled from "styled-components";
-import { BiConversation } from "react-icons/bi";
-import { GiExplosiveMeeting } from "react-icons/gi";
-import { FaUserFriends } from "react-icons/fa";
 import data from "./dataFeature";
+import "./feature.css";
+import roomscreenimg from "../../Assets/Roomscreen.jpg";
+import profileimg from "../../Assets/Profile.jpg";
+import roomspage from "../../Assets/RoomsPage.jpg";
 
+import { FeatureCard } from "./featureCard";
 export const Features = () => {
   console.log(data);
   return (
     <Container>
       <Wrapper className="container">
-        {data.map((d) => (
-          <Card key={d.id}>
-            <ImageIcon>{d.icon}</ImageIcon>
-            <CardContent>
-              <Title>{d.title}</Title>
-              <Text>{d.desc}</Text>
-            </CardContent>
-          </Card>
-        ))}
+        <FeatureCard
+          src={roomscreenimg}
+          title="Be your own creator"
+          desc="It’s easy to create Live Rooms and start your own conversations about any topic. Select a group and start the conversation, then see who tunes in."
+        />
+        <FeatureCard
+          fd
+          src={profileimg}
+          title="Unique live rooms"
+          desc="On OneMembr you'll find conversations with top artists, athletes, and people in the know. Preview upcoming rooms and add them to your calendar so you don't miss out."
+        />
+        <FeatureCard
+          src={roomspage}
+          title="Find your people"
+          desc="Browse groups on any subject, from teams to bands to topics that have the world talking. Select your topics and we'll notify you about rooms you can join."
+        />
       </Wrapper>
     </Container>
   );
 };
 
-const Text = styled.div`
-  font-size: 16px;
-`;
-const ImageIcon = styled.div`
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  color: #24515b;
-`;
-const Title = styled.div`
-  font-size: 22px;
-  font-weight: 600;
-`;
-const CardContent = styled.mark`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background: transparent;
-`;
-const Card = styled.div`
-  width: 300px;
-  height: 250px;
-  background: transparent;
-  border: 1px solid grey;
-  border-radius: 7px;
-  margin: 10px 15px;
-  cursor: pointer;
-  transition: all 350ms;
-  transform: scale(1);
-  &:hover {
-    transform: scale(1.03);
-  }
-`;
 const Wrapper = styled.article`
   width: 100%;
   height: 100%;
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  // flex-wrap: wrap;
 `;
 const Container = styled.main`
   width: 100%;
   height: 100%;
-  min-height: 70vh;
-  background: whitesmoke;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  background-image: url("asset/img.png");
+  background-size: cover;
+  // background-repeat: no-repeat;
+  background-position: 300px;
+  @media (max-width: 768px) {
+    background: rgba(0, 0, 0, 0.4);
+  }
 `;
