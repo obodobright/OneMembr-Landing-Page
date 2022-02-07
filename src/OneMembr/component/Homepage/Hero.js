@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { AppDownload } from "../AppDownload/AppDownload";
-import heroImg from "../../Assets/hero-img.jpg";
+import Typist from "react-typist";
 
-export const Hero = () => {
+export const Hero = ({ modalFunction }) => {
   return (
     <>
       <Container>
@@ -10,18 +10,24 @@ export const Hero = () => {
           <HeroContent>
             <div className="container">
               <ImageHolder />
-              <Content>Culture. Inclusivity. Community.</Content>
+              <Typist>
+                <Content>
+                  {" "}
+                  Culture. <br />
+                  Inclusivity. <br />
+                  Community.{" "}
+                </Content>{" "}
+              </Typist>{" "}
               <HeroFooter className="container">
                 <FooterText>
-                  Join interesting conversations. Express your culture safely on OneMembr
-                </FooterText>
-                <Div></Div>
-                <AppDownload />
-              </HeroFooter>
-            </div>
-          </HeroContent>
-        </Wrapper>
-      </Container>
+                  Join interesting conversations.Express your culture safely on OneMembr{" "}
+                </FooterText>{" "}
+                <Div> </Div> <AppDownload modalFunction={modalFunction} />
+              </HeroFooter>{" "}
+            </div>{" "}
+          </HeroContent>{" "}
+        </Wrapper>{" "}
+      </Container>{" "}
     </>
   );
 };

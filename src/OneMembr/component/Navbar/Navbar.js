@@ -1,25 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../../Assets/logo.png";
-import { Link } from "react-router-dom";
-
 export const NavBar = () => {
   return (
     <Container>
       <Wrapper className="container">
-        <Logo src={logo} />
+        <Logo src={logo} />{" "}
         <Navigation>
-          <NavLink>Home</NavLink>
+          <NavLink> Home </NavLink>{" "}
           <NavLink>
             <a
               href="mailto:contact@onemembr.com"
               style={{ textDecoration: "none", color: "black" }}
             >
-              Contact us
-            </a>
-          </NavLink>
-        </Navigation>
-      </Wrapper>
+              Contact us{" "}
+            </a>{" "}
+          </NavLink>{" "}
+        </Navigation>{" "}
+      </Wrapper>{" "}
     </Container>
   );
 };
