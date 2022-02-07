@@ -1,19 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBHOOkLpGSCWKUhbBdSVgPhy_rIOuWOUEA",
-    authDomain: "real-estate-project-e0ec3.firebaseapp.com",
-    projectId: "real-estate-project-e0ec3",
-    storageBucket: "real-estate-project-e0ec3.appspot.com",
-    messagingSenderId: "570426177994",
-    appId: "1:570426177994:web:feece636cbdd39aac5b733",
-    measurementId: "G-C4Z443PXF2",
+const config = {
+    apiKey: "AIzaSyB47uuoiZ_G9d2vXUXOoykNcbxZjMO8qvQ",
+    authDomain: "onemembr-d69a7.firebaseapp.com",
+    projectId: "onemembr-d69a7",
+    storageBucket: "onemembr-d69a7.appspot.com",
+    messagingSenderId: "251146984539",
+    appId: "1:251146984539:web:313e87b0cf9c5215cff37e",
 };
-
-const app = initializeApp(firebaseConfig);
-const firestore = getFirestore();
-const fireAuth = getAuth();
-
-export { app, firestore, fireAuth };
+export const app = initializeApp(config);
+export const firestore = getFirestore();

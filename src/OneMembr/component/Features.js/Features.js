@@ -8,7 +8,6 @@ import roomspage from "../../Assets/RoomsPage.jpg";
 
 import { FeatureCard } from "./featureCard";
 export const Features = () => {
-  console.log(data);
   return (
     <Container>
       <Wrapper className="container">

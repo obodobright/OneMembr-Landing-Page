@@ -11,17 +11,17 @@ export const Footer = () => {
           <FooterHead>
             <Logo src={logo} />
             <IconHolder>
-              <a href="https://instagram.com/joinonemembr" target="_blank">
+              <a href="https://instagram.com/joinonemembr" target="_blank" rel="noreferrer">
                 <Icon>
                   <AiOutlineInstagram />
                 </Icon>
               </a>
-              <a href="https://twitter.com/onemembr" target="_blank">
+              <a href="https://twitter.com/onemembr" target="_blank" rel="noreferrer">
                 <Icon>
                   <AiOutlineTwitter />
                 </Icon>
               </a>
-              <a href="mailto:contact@onemembr.com" target="_blank">
+              <a href="mailto:contact@onemembr.com" target="_blank" rel="noreferrer">
                 <Icon>
                   <AiOutlineMail />
                 </Icon>

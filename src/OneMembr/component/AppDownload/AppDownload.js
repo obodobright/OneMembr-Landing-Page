@@ -3,20 +3,24 @@ import googleStore from "../../Assets/googleplaystore.svg";
 import appStore from "../../Assets/appstore.svg";
 import kaios from "../../Assets/kaios.png";
 
-export const AppDownload = ({ tt }) => {
+export const AppDownload = ({ tt, modalFunction }) => {
   return (
     <Container>
       <DownloadWrapper jc={tt}>
-        <a href="https://play.google.com/store/apps/details?id=com.onemember_ui" target="_blank">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.onemember_ui"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Store src={googleStore} />
         </a>
 
-        <a href="#">
+        <div href="#" onClick={modalFunction}>
           <Store src={appStore} />
-        </a>
-        <a href="#">
+        </div>
+        <div href="#" onClick={modalFunction}>
           <StoreKai src={kaios} />
-        </a>
+        </div>
       </DownloadWrapper>
     </Container>
   );
