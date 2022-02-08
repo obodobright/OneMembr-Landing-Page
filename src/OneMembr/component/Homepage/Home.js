@@ -15,7 +15,7 @@ export const Home = () => {
     <>
       <Hero modalFunction={showMyModal} />
       <Features />
-      <DownloadAction />
+      <DownloadAction modalFunction={showMyModal} />
       <Footer />
       {showModal && <Modal removeBtn={showMyModal} />}
     </>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { AppDownload } from "../AppDownload/AppDownload";
 
-export const DownloadAction = () => {
+export const DownloadAction = ({ modalFunction }) => {
   return (
     <Container>
       <Wrapper className="container">
@@ -9,7 +9,7 @@ export const DownloadAction = () => {
           <h1>Download OneMembr and keep conversation going!</h1>
         </Content>
         <Download>
-          <AppDownload tt />
+          <AppDownload tt modalFunction={modalFunction} />
         </Download>
       </Wrapper>
     </Container>

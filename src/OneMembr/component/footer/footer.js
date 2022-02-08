@@ -37,6 +37,18 @@ export const Footer = () => {
                 </a>
               </ul>
             </Content>
+            <Copyright>
+              <p>
+                {" "}
+                Copyright © 2022
+                {""}{" "}
+                <a href="https:dfxtgroup.com" target="_blank" rel="noreferrer">
+                  DFXT Investment Nig. Ltd.
+                </a>
+                {""}
+                All Rights Reserved.
+              </p>
+            </Copyright>
           </FooterBottom>
         </FooterContent>
       </Wrapper>
@@ -44,6 +56,11 @@ export const Footer = () => {
   );
 };
 
+const Copyright = styled.div`
+  margin-left: 40px;
+  font-size: 14px;
+  font-weight: 400;
+`;
 const ListHeader = styled.div`
   font-size: 20px;
   font-weight: bold;
@@ -55,7 +72,7 @@ const ListHeader = styled.div`
     position: absolute;
     background: #2a9ac9;
     height: 3px;
-    width: 70%;
+    width: 20%;
     top: 25px;
     left: 0;
   }
@@ -102,9 +119,6 @@ const Content = styled.div`
 `;
 const FooterBottom = styled.div`
   margin-left: 30px;
-  // @media (max-width: 768px) {
-  //   margin: 0;
-  // }
 `;
 const FooterHead = styled.div``;
 

@@ -3,21 +3,37 @@ import "./modal.css";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { useRegister } from "../../hooks/useRegister";
+import { Loader } from "../Loader/Loader";
+
 export const Modal = ({ removeBtn }) => {
   const { loading, error, Register } = useRegister();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [err, setErr] = useState(false);
 
   const postUser = (e) => {
     e.preventDefault();
-    Register(username, email);
+    if (email === "" || username === "") {
+      setErr(true);
+    } else {
+      Register(username, email);
+      window.setTimeout(() => {
+        removeBtn();
+      }, 2000);
+      setUsername("");
+      setEmail("");
+    }
   };
 
   return (
     <div className="modal-container">
       <div className="modal-content">
         <div className="form-container">
-          <h3>Pre-register for the upcoming link</h3>
+          <p className="form-text">
+            Thanks for showing interest in OneMembr. This version is currently going through
+            internal testing,kindly drop your email so you can be alerted when it's available on the
+            store
+          </p>
           <label>
             Username <br />
             <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -26,7 +42,17 @@ export const Modal = ({ removeBtn }) => {
             Email <br />
             <Input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
           </label>
-          <button className="sumbit-btn">Submit</button>
+          {err && <p style={{ color: "red", alignItems: "left" }}>Please input all valid field</p>}
+          {loading ? (
+            <button disabled className="sumbit-btn-disabled">
+              <Loader />
+            </button>
+          ) : (
+            <button className="sumbit-btn" onClick={postUser}>
+              Submit
+            </button>
+          )}
+          {error && <p>{error}</p>}
           <button onClick={removeBtn} className="remove-btn">
             <FaTimes />
           </button>
