@@ -13,7 +13,7 @@ export const NavBar = () => {
               href="mailto:contact@onemembr.com"
               style={{ textDecoration: "none", color: "black" }}
             >
-              Contact us{" "}
+              Contact{" "}
             </a>{" "}
           </NavLink>{" "}
         </Navigation>{" "}
@@ -24,7 +24,7 @@ export const NavBar = () => {
 
 const NavLink = styled.div`
   margin: 0 30px;
-  font-size: 20px;
+  font-size: 1.2em;
   cursor: pointer;
   text-decoration: none;
   color: black;

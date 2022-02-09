@@ -10,6 +10,7 @@ export const Modal = ({ removeBtn }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [err, setErr] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const postUser = (e) => {
     e.preventDefault();
@@ -17,11 +18,15 @@ export const Modal = ({ removeBtn }) => {
       setErr(true);
     } else {
       Register(username, email);
+
+      window.setTimeout(() => {
+        setIsSuccess(true);
+      }, 4000);
       window.setTimeout(() => {
         removeBtn();
-      }, 2000);
-      setUsername("");
+      }, 6000);
       setEmail("");
+      setUsername("");
     }
   };
 
@@ -52,6 +57,7 @@ export const Modal = ({ removeBtn }) => {
               Submit
             </button>
           )}
+          {isSuccess && <p style={{ color: "green" }}>Request submitted successfully</p>}
           {error && <p>{error}</p>}
           <button onClick={removeBtn} className="remove-btn">
             <FaTimes />

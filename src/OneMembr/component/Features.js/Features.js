@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import data from "./dataFeature";
 import "./feature.css";
 import roomscreenimg from "../../Assets/Roomscreen.jpg";
 import profileimg from "../../Assets/Profile.jpg";
