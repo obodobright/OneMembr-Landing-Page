@@ -8,10 +8,29 @@
 
 .modal-content {
     width: 400px;
-    min-height: 250px;
+    min-height: 350px;
+    /* height: 100%; */
     background-color: white;
-    margin: 200px auto;
+    margin: 150px auto;
     z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 300px;
+        min-height: 400px;
+        margin: 200px auto;
+    }
+    .remove-btn {
+        outline: none;
+        border: none;
+        color: red;
+        position: absolute;
+        top: 3px;
+        right: 10px;
+        background-color: transparent;
+        /* display: none; */
+    }
 }
 
 .form-container {
@@ -47,4 +66,28 @@
     border: 1px solid #2a9bc9;
     color: #2a9bc9;
     background-color: white;
+}
+
+.sumbit-btn-disabled {
+    border: 1px solid #2a9bc9;
+    color: #2a9bc9;
+    background-color: white;
+    outline: none;
+    border: 0;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-text {
+    font-size: 16px;
+    padding: 20px;
+    font-weight: 200;
+    /* word-spacing: 1.4px; */
+    letter-spacing: 1px;
+}
+
+label {
+    font-weight: 400;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { firestore } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 export const useRegister = () => {
